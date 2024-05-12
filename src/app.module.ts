@@ -6,6 +6,8 @@ import { UserModule } from './user/user.module';
 import { User } from './user/entities/user.entity';
 import { TakssModule } from './takss/takss.module';
 import { Takss } from './takss/entities/takss.entity';
+import { TaksscategoriaModule } from './taksscategoria/taksscategoria.module';
+import { Taksscategoria } from './taksscategoria/entities/taksscategoria.entity';
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -15,9 +17,9 @@ import { Takss } from './takss/entities/takss.entity';
     username: 'root',
     password: 'oracle21',
     database: 'apicul',
-    entities: [User,Takss],
+    entities: [User,Takss,Taksscategoria],
     synchronize: true,
-  }), UserModule, TakssModule],
+  }), UserModule, TakssModule, TaksscategoriaModule],
   controllers: [AppController],
   providers: [AppService],
 })
